@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>blog</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        padding: 20px;
+        background-color: #bcc5ce;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .blog {
+        text-align: center;
+        font-family: poppins, sans-serif;
+        font-weight: 14px;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      header {
+        background-color: #ffffff;
+        padding: 30px;
+      }
+      header h1 {
+        text-align: center;
+        font-size: 60px;
+        color: #000000;
+        margin: 1.5 0px;
+      }
+
+      h2 {
+        color: #000000;
+        margin: 1.5 0px;
+      }
+      .left-column {
+        float: left;
+        width: 75%;
+      }
+
+      .right-column {
+        width: 25%;
+        float: right;
+        padding-left: 20px;
+      }
+      .card {
+        padding: 20px;
+        background-color: #ffffff;
+        margin-top: 20px;
+      }
+
+      .card img {
+        width: 100%;
+      }
+
+      .right-column .card img {
+        margin-bottom: 10px;
+      }
+
+      /*responsive */
+
+      @media (max-width: 800px) {
+        .left-column,
+        .right-column {
+          width: 100%;
+          padding: 0px;
+        }
+      }
+    </style>
+    <body>
+      <div>
+        <h1 class="blog">Our Blog</h1>
+      </div>
+      <div class="row">
+        <div class="left-column">
+          <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <img src="card/blog1.jpg" alt="blog " />
+            <p>Some text..</p>
+            <p>
+              Sunt in culpa qui officia deserunt mollit anim id est laborum
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco.
+            </p>
+          </div>
+          <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <img src="card/blog2.jpg" alt="blog " />
+            <p>Some text..</p>
+            <p>
+              Sunt in culpa qui officia deserunt mollit anim id est laborum
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco.
+            </p>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="card">
+            <h2>About Me</h2>
+            <img src="card/b1.jpg" alt="me" />
+            <p>
+              Some text about me in culpa qui officia deserunt mollit anim..
+            </p>
+          </div>
+          <div class="card">
+            <h3>Popular Post</h3>
+            <img src="card/blog5.jpg" alt="popular" />
+            <img src="card/blog6.jpg" alt="popular" />
+            <img src="card/blog7.jpg" alt="popular" />
+          </div>
+          <div class="card">
+            <h3>Follow Me</h3>
+            <p>Some Text...</p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </head>
+</html>

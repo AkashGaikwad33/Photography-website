@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- Nav Bar-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Wedding Cinema's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  </head>
+  <body>
+    
+                 <!--  Navigation Bar  -->
+    <div class="main-nav">
+      <span class="logo"><h4>Wedding Cinema's</h4></span>
+      <div class="topnav" id="myTopnav">
+            <a href="contact.html" class="active">Contact</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+        <div class="dropdown">
+          <button class="dropbtn">Serives 
+            <i class="fa fa-caret-down"></i>
+          </button>
+              <div class="dropdown-content">
+                    <a href="#">Pre-Wedding</a>
+                    <a href="#">Wedding</a>
+                    <a href="#">Cinematic video</a>
+                    <a href="#">Product</a>
+              </div>
+        </div> 
+        <a href="index.html">Home</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    </div>
+
+    <!-- Images Silder -->
+
+    <div class="slider">
+      <!-- fade css -->
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h3>Serives</h3>
+          <h1>pre-wedding</h1>
+          <a href="pre-wedding.html" class="myButton1">Details</a>
+        </div>
+        <img src="images/Pre-wedding.jpg" style="width: 100%; height: 100%"  class="anm-img"/>
+      </div>
+      <div class="myslide fade">
+        <div class="txt">
+          <h3>Serives</h3>
+          <h1>Wedding</h1>
+          <a href="wedding.html" class="myButton2">Details</a>
+        </div>
+        <img src="images/wedding.jpg" style="width: 100%; height: 100%" class="anm-img" />
+      </div>
+      <div class="myslide fade">
+        <div class="txt">
+          <h3>Serives</h3>
+          <h1>post wedding</h1>
+           <a href="destination.html" class="myButton3">Details</a>
+        </div>
+        <img src="images/post-wedding.jpg" style="width: 100%; height: 100%" class="anm-img" />
+      </div>
+      <div class="myslide fade">
+        <div class="txt">
+          <h3>Serives</h3>
+          <h1>Destination</h1>
+          <a href="#" class="myButton4">Details</a>
+        </div>
+        <img src="images/destination.jpg" style="width: 100%; height: 100%" class="anm-img" />
+      </div>
+      <div class="myslide fade">
+        <div class="txt">
+          <h3>Serives</h3>
+          <h1>Maternity</h1>
+          <a href="#" class="myButton5">Details</a>
+        </div>
+        <img src="images/maternity.jpg" style="width: 100%; height: 100%" />
+      </div>
+      <!-- /fade css -->
+
+      <!-- onclick js -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="dotsbox" style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      <script src="home.js"></script>
+      <!-- /onclick js -->
+    </div>
+    
+    </div>
+    <div class="heading"> <br> <br> <br> <br> <br> <br>
+      <h1>Welcome to Wedding Cinema's World</h1>
+      <br>
+      <p>Wedding Cinema'sis committed to creating engaging, results-driven content for our clients. With the highest quality equipment and</p> 
+      <p1>technologies, We create extraordinary and compelling content that delivers measurable results.</p1>
+      <br><br>
+      <a href="#" class="myButton">Know More</a><br><br><br><br>
+    </div>
+
+    <!-- Making Cards --> 
+    <div class="card" id="cards">
+      <div class="image">
+         <img src="card/card1.jpg">
+      </div>
+      <div class="title">
+       <h1> Wedding</h1>
+      </div>
+      <div class="des">
+       <p>We take care of all your wedding photography needs and strive to deliver the best...</p>
+      <button type="button" onclick="myfunction()">Read More...</button>
+      </div>
+      </div>      
+
+      <div class="card">      
+      <div class="image">
+         <img src="card/card5.jpg">
+      </div>
+      <div class="title">
+       <h1> Pre-Wedding </h1>
+      </div>
+      <div class="des">
+       <p>we take care of every little detail to make your pre-wedding photoshoot a supercharged affair with grand success...</p>
+      <button type="button2" onclick="myfunction2()">Read More...</button>
+      </div>
+      </div> 
+
+      <div class="card">     
+      <div class="image">
+         <img src="card/card3.jpg">
+      </div>
+      <div class="title">
+       <h1>Destination Wedding</h1>
+      </div>
+      <div class="des">
+       <p>Create your beautiful memories with us. Contact us for photography...</p>
+      <button type="button3" onclick="myfunction3()">Read More...</button>
+      </div>
+      </div> 
+
+      <div class="card">     
+      <div class="image">
+         <img src="card/card4.jpg">
+      </div>
+      <div class="title">
+       <h1> Product</h1>
+      </div>
+      <div class="des">
+       <p>Let our product photography services help your product to tell your story to the world...</p>
+      <button type="button4" onclick="myfunction4()">Read More...</button>
+      </div>
+      </div>
+
+      <!--Section One-->
+
+      <section class="section-one">
+        <div class="container">
+          <div class="sec-one-left">
+            <!-- image here -->
+            <div>
+              <h3>AMAZING TEAM WORK WITH PROFESSIONAL PHOTOGRAPHER</h3><br>
+              <p>
+                YOU DON'T MAKEA PHOTOGRAPH JUST WITH CAMERA.YOU BRING TO THE ACT OF PHOTOGRAPHY ALL THE PICTURES YOU HAVE SEEN,THE BOOKS YOU HAVE READ,THE MUSIC YOU HAVE
+                HEARD,THE PEOPLE YOU HAVE LOVED.
+              </p><br>
+              <a href="about.html" class="myButton3">View All</a>
+            </div>
+          </div><br><br>
+  
+        
+      </section>
+      <!---------------------Image Gallery--------------------------->
+      <div>
+        <h3 class="Port">PORTFOLIO</h3><br>
+        <h2 class="work">Our Latest Work</h2>
+      </div>
+      <div class="wrapper">
+        
+        <div class="gallery">
+            <div class="gallery__item gallery__item--1">
+                <a href="#" class="gallery__link">
+                    <img src="gallary/wedding1.jpg" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Wedding</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--2">
+                <a href="#" class="gallery__link">
+                    <img src="gallary/pre2.jpg" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Pre-Wedding</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--3">
+                <a href="#" class="gallery__link">
+                    <img src="gallary/pro4.jpg" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>A Product</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--4">
+                <a href="#" class="gallery__link">
+                    <img src="gallary/pre1.jpg" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Pre-Wedding</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--5">
+                <a href="#" class="gallery__link">
+                    <img src="gallary/pre4.jpg" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Destination Wedding</span>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery__item gallery__item--6">
+                <a href="#" class="gallery__link">
+                    <img src="gallary/m1.jpg" class="gallery__image" />
+                    <div class="gallery__overlay">
+                        <span>Maternity</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- footer -->
+    <footer class="footer-main bg-dark fixed-bottom">
+      <div class="container3">
+        <div class="row address-main">
+          <div class="col-lg-4 col-sm-12 col-xs-12">
+            <div class="address-box clearfix">
+              <div class="add-icon">
+                <img src="images/location1.png" alt="" />
+              </div>
+              <div class="add-content">
+                <h5>Address</h5>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut veniam </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 col-xs-12">
+            <div class="address-box clearfix">
+              <div class="add-icon">
+                <img src="images/phone1.png" alt="" />
+              </div>
+              <div class="add-content">
+                <h5>Phone</h5>
+                <p>  +(91) 000000000 <br />
+                +(91) 000000000  </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 col-xs-12">
+            <div class="address-box clearfix">
+              <div class="add-icon">
+                <img src="images/gmail.png" alt="" />
+              </div>
+              <div class="add-content">
+                <h5>Email</h5>
+                <p> <a href="mailto:" style="text-decoration:none">weddingcinema's@gmail.com</a> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    
+    <!-- Copyright Footer -->
+    <footer class="bg-dark text-center text-white">
+    
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" >
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+    
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-twitter"></i
+        ></a>
+    
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-google"></i
+        ></a>
+    
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-instagram"></i
+        ></a>
+    
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+    
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+     ©Copyright 2022 All Rights Reserved.
+    </div>
+    <!-- Copyright -->
+    </footer>
+    </footer>
+
+    
+    
+  </body>
+</html>

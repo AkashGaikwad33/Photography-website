@@ -1,0 +1,603 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+    }
+    /****************** Navigation Bar *************************/
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /**************************** logo   *************************/
+    .main-nav {
+      background-color: #333;
+      padding: 7px;
+    }
+    .logo {
+      float: left;
+      display: block;
+      background-color: #333;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      background: linear-gradient(
+        to right,
+        #fff 20%,
+        #65c7f7 40%,
+        #0052d4 60%,
+        #fff 80%
+      );
+      background-size: 200% auto;
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate 2s linear infinite;
+    }
+    @keyframes animate {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .active {
+      background-color: #04aa6d;
+      color: white;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .dropdown {
+      float: right;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #555;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .topnav.responsive .dropdown {
+        float: none;
+      }
+      .topnav.responsive .dropdown-content {
+        position: relative;
+      }
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .proimg {
+      height: 500px;
+      width: 1580px;
+      filter: blur(5px);
+      -webkit-filter: blur(2px);
+    }
+    .bg-text2 {
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      display: block;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+    .p1 {
+      font-family: poppins, sans-serif;
+      font-size: 18px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .p2 {
+      font-family: poppins, sans-serif;
+      font-size: 18px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .ch {
+      font-family: poppins, sans-serif;
+      text-decoration: underline;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .p3 {
+        font-family: poppins, sans-serif;
+        font-size: 18px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: #1e1f22;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+    @media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: aqua;
+  }
+}
+    .ch3 {
+      font-family: poppins, sans-serif;
+      text-decoration: underline;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .p4 {
+      font-family: poppins, sans-serif;
+      font-size: 18px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .p5 {
+      font-family: poppins, sans-serif;
+      font-size: 18px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      overflow-x: hidden;
+      font-family: "PT Sans", sans-serif;
+    }
+    .section-container {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .section-container .columns {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    .section-container .columns.image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .section-container .columns.content .content-container {
+      padding: 40px 50px;
+    }
+    .section-container .columns.content .content-container h5 {
+      font-weight: 700;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    .section-container .columns.content .content-container p {
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 20px;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    @media screen and (max-width: 767px) {
+      .section-container {
+        flex-flow: row wrap;
+      }
+      .section-container .columns.image {
+        display: block;
+        order: 1;
+
+        width: 100%;
+        height: 250px;
+      }
+      .section-container .columns.content {
+        display: block;
+        order: 2;
+        width: 100%;
+      }
+      .section-container .columns.content .content-container {
+        padding: 20px 35px;
+      }
+      .section-container .columns.content .content-container h5 {
+        margin-bottom: 5px;
+      }
+    }
+    .ch6 {
+      font-family: poppins, sans-serif;
+      text-decoration: underline;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+    
+ *{
+   margin: 0px;
+}
+
+    h1{
+    text-align: center;
+    }
+    p{
+        font-size: 24px;
+    }
+
+    header{
+        font-family: 'Dokdo', cursive;
+        font-size: 30px;
+        padding: 20px;
+    }
+    main{
+         margin-left: 120px;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .box{
+        width: 20%;
+        float: left;
+        padding: 7px;
+        padding-left: 10px;  
+        display: block;
+        overflow: hidden;
+        border-radius: 3px;
+    }
+
+    img{
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    /* .popup{
+        transform: scale(2,2);
+        transition: .3s transform;
+    }  */
+
+  </style>
+  <body>
+    <!--  Navigation Bar  -->
+    <div class="main-nav">
+      <span class="logo"><h4>Wedding Cinema's</h4></span>
+      <div class="topnav" id="myTopnav">
+        <a href="#contact" class="active">Contact</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Serives
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Pre-Wedding</a>
+            <a href="#">Wedding</a>
+            <a href="#">Cinematic video</a>
+            <a href="#">Product</a>
+          </div>
+        </div>
+        <a href="#home">Home</a>
+        <a
+          href="javascript:void(0);"
+          style="font-size: 15px"
+          class="icon"
+          onclick="myFunction()"
+          >&#9776;</a
+        >
+      </div>
+    </div>
+    <div>
+      <img src="card/photostudio.jpg" class="proimg" alt="" />
+      <h1 class="bg-text2">Product photography In Thane</h1>
+      <br/>
+    </div><br><br>
+    <div>
+        <p class="p1">
+          E-commerce is a multi-billion dollar industry that heavily depends on product photography to sell its goods on various e-commerce platforms. According to product photography surveys, people process images in just 13 milliseconds, and hence product photos play a vital role in setting a high-quality first impression of your product. The ollar studio is one of the leading e-commerce product photography service providers in Mumbai and Thane that emphasizes delivering top quality outcomes to the clients which in return helps them to influence the purchase decisions of their potential buyers. 
+        </p>
+        <br/>
+      <p class="p2">
+        Our experienced in-house team of photographers and editors will help you in building and maintaining the desired level of brand image for your products. We strive to provide premium quality photos along with a variety of product photography forms that will suit any brand requirement. Our photos are accepted by all major e-commerce platforms. We believe in the thought by Suzi Collins, “Every brand should tell a story”. Let our product photography services help your product and business tell your story to the world.
+      </p>
+      <br /><br><br><br>
+      <div class="ch">
+        <h2>How Do We Work?</h2>
+      </div><br><br><br>
+      <div>
+            <p class="p3">
+                When it comes to delivering high-quality e-commerce photographs, Ollar studio never fails to fulfill client’s expectations. We have a fully equipped onsite Photography studio on Rent and experienced professional photographers, product stylists, retouchers and post-processing team. 
+            </p>
+      </div>
+      <div class="container">
+        <div class="timeline">
+          <ul>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Research</h1>
+                <p>Before starting product photography, it is very important for us to know more about your product and business. This will help us in making appropriate choices for the photos to be taken and the right style of photography to be chosen. We take help of questionnaires updated by you to note the important details along with on-call discussions if any additional details are required.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Planning The Photoshoot</h1>
+                <p>The entire photoshoot has to be planned well in advance to be able to make the necessary arrangements in terms of transporting the products from your end to the shoot location along with other materials that have to be included during the shoot. We plan the different styles of photos that we intend to take as per the requirements and also arrange for models to be present on the day of shoot if necessary.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Capturing the Photos</h1>
+                <p>Professional product photos are a significant investment made by any business and you should make the most of it. We have a professional e-commerce photography team who will be taking care of this whole process for you. Our photographers are well aware of what exactly is needed in order to bring the best out of your products.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="date">20th may, 2010</h3>
+                <h1>Editing The Photos</h1>
+                <p>It’s always important to edit your photos afterwards irrespective of how great the original shot is. Our post-processing team is detail oriented and ensures to make the necessary edits in order to enhance the look of the final product. All enhancements are made in regards to the agreed discussions with the clients.</p>
+              </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                  <h3 class="date">20th may, 2010</h3>
+                  <h1>Sharing The Final Photos</h1>
+                  <p>The final photos will be shared online for easy and convenient ways to maintain the quality of the photographs. We highly recommend downloading these photos and storing them in your computer as these will be stored with us only for a limited period of time.
+                </p>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2 class="ch3">Our Product Photography Services</h2>
+      </div><br><br>
+      <div>
+        <p class="p4">
+            We provide diverse and specialised options for e-commerce product photography to match your specific needs which includes White background photography, Contextual shots, Scale shots, Detailed product shots, Group product shots, Flat lay product shots and Packaging product photos. Along with these types we also offer mannequin and on-model images along with creative lifestyle product shoot settings varying from table-top sized to full room customisable scenes.
+        </p><br>
+        <p class="p5"> Just mention your requirements and be rest assured to witness the high quality of product photos that will help you attract attention to your products like never before.  Let our product photography services help your product and business tell your story to the world.</p>
+      </div><br><br>
+      <div class="section-container">
+        <div
+          class="columns image"
+          style="background-image: url('card/ecom.jpeg')"
+        >
+          &nbsp;
+        </div>
+      <div class="columns content">
+        <div class="content-container">
+          <h5>Ecommerce Product Photography</h5>
+          <p>
+            More the appealing your professional images of the products are on your Ecommerce website, the greater the chances of sales. Our experienced eCommerce Photographers and post-production team in Mumbai, India, can help you make a Product catalogue look more attractive and drive more sales. Our Ecommerce product photographers specialize in eCommerce Photography, 360 Product Rotations, Packshots, Table Top, Invisible Mannequin, and many more! Contact us if you are looking for the best E-commerce product photography service in Mumbai, India.
+          </p>
+          <p>
+            More the appealing your professional images of the products are on your Ecommerce website, the greater the chances of sales. Our experienced eCommerce Photographers and post-production team in Mumbai, India, can help you make a Product catalogue look more attractive and drive more sales. Our Ecommerce product photographers specialize in eCommerce Photography, 360 Product Rotations, Packshots, Table Top, Invisible Mannequin, and many more! Contact us if you are looking for the best E-commerce product photography service in Mumbai, India.
+          </p>
+        </div>
+      </div><br><br><br><br>
+            <header>
+             
+             <h1>
+                Our Recent Work <p>We focus on the objectives of your brand and ensure smooth communication in order to derive most out of our product photography services.</p>
+                </h1>
+                <hr/>
+            
+            </header>
+            
+        <main>
+             <div class="box">
+            <img src="card/g1.jpg" class="popup"></div>
+            <div class="box">
+            <img src="card/g2.jpg" class="popup"></div>
+            <div class="box">
+            <img src="card/g3.jpg" class="popup"></div>
+            <div class="box">
+            <img src="card/g6.jpg" class="popup"></div>
+            <div class="box">
+            <img src="card/g5.jpg" class="popup"></div>
+            <div class="box">
+            <img src="card/g7.jpg" class="popup"></div>
+            <div class="box">
+            <img src="card/g8.jpg" class="popup"></div>
+        </main>
+            
+  </body>
+</html>

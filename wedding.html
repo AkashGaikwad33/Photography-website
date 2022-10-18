@@ -1,0 +1,684 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wedding</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+    }
+    /****************** Navigation Bar *************************/
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /**************************** logo   *************************/
+    .main-nav {
+      background-color: #333;
+      padding: 7px;
+    }
+    .logo {
+      float: left;
+      display: block;
+      background-color: #333;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      background: linear-gradient(
+        to right,
+        #fff 20%,
+        #65c7f7 40%,
+        #0052d4 60%,
+        #fff 80%
+      );
+      background-size: 200% auto;
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate 2s linear infinite;
+    }
+    @keyframes animate {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .active {
+      background-color: #04aa6d;
+      color: white;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .dropdown {
+      float: right;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #555;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .topnav.responsive .dropdown {
+        float: none;
+      }
+      .topnav.responsive .dropdown-content {
+        position: relative;
+      }
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .wedimg {
+      height: 500px;
+      width: 1580px;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+    }
+    .bg-text {
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      display: block;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+    .text {
+      font-family: poppins, sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      background-color: #ffffff;
+      display: block;
+      text-emphasis-color: #333333;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .h2-a {
+      font-family: poppins, sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      padding: 15px 0px 15px 0px;
+      line-height: 27.8571px;
+      text-decoration: underline #f72f53;
+      text-align: center;
+      word-spacing: 0px;
+    }
+    .h6-b {
+      font-family: poppins, sans-serif;
+      font-size: 14px;
+      line-height: 26px;
+      height: auto;
+      width: auto;
+      font-weight: 700;
+      padding: 15px 0px 15px 0px;
+      line-height: 27.8571px;
+      text-align: center;
+      word-spacing: 0px;
+    }
+    .team1 {
+      height: 339.391px;
+      width: 509.594px;
+      padding: 10px 10px;
+      margin-left: 200px;
+    }
+    .section {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      width: 80%;
+      margin: 10rem auto 0 auto;
+    }
+    .section img {
+      height: 340.339px;
+    }
+    .section h1 {
+      margin: 0;
+      font-weight: 500;
+      text-align: center;
+      color: #333333;
+    }
+    .section p {
+      color: #333;
+      font-family: poppins, sans-serif;
+      margin-right: 15px;
+      font-size: 20px;
+      font-weight: 14px;
+      height: 156px;
+      width: 600px;
+    }
+    .section1 {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      width: 80%;
+      margin: 10rem auto 0 auto;
+    }
+    .kk {
+      height: 340.339px;
+    }
+    .section1 h1 {
+      margin: 0;
+      font-weight: 500;
+      text-align: center;
+      color: #333333;
+    }
+    .section1 p {
+      color: #333;
+      font-family: poppins, sans-serif;
+      margin-right: 15px;
+      font-size: 20px;
+      font-weight: 14px;
+      height: 156px;
+      width: 600px;
+    }
+    .section2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      width: 80%;
+      margin: 10rem auto 0 auto;
+    }
+    .section2 img {
+      height: 340.339px;
+    }
+    .section2 h1 {
+      margin: 0;
+      font-weight: 500;
+      text-align: center;
+      color: #333333;
+    }
+    .section2 p {
+      color: #333;
+      font-family: poppins, sans-serif;
+      margin-right: 15px;
+      font-size: 20px;
+      font-weight: 14px;
+      height: 156px;
+      width: 600px;
+    }
+    .h2-g {
+      font-family: poppins, sans-serif;
+      text-align: center;
+      font-weight: 14px;
+      font-size: 40px;
+      text-decoration: underline;
+    }
+    .g2 {
+      font-family: poppins, sans-serif;
+      text-align: center;
+      font-weight: 14px;
+      font-size: 20px;
+      padding: 15px;
+    }
+    /* Gallary  */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container2 {
+      position: relative;
+    }
+    .gallery2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    .gallery2 img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      padding: 5px;
+      transition: all 4;
+    }
+    .gallery2 img:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 10px lightgray;
+      transform: scale(1.03);
+    }
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 20;
+    }
+    .popup span {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      color: white;
+      cursor: pointer;
+      font-size: 40px;
+      cursor: pointer;
+      z-index: 20;
+    }
+    .popup img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 750px;
+      object-fit: cover;
+    }
+    @media (max-width: 760px) {
+      .popup img {
+        width: 95%;
+      }
+    }
+    .footer-main {
+      padding-top: 70px;
+      position: relative;
+      align-items: center;
+      /* padding-left: 15px; */
+    }
+
+    .address-main > div.col-lg-4 {
+      border-bottom: dotted 1px #999;
+    }
+    .address-box {
+      padding: 10px 0;
+      margin-bottom: 30px;
+    }
+    .add-icon {
+      float: left;
+      width: 60px;
+      display: inline-block;
+      padding: 0px 5px;
+    }
+    .address-box .add-icon {
+      background: #27303b;
+      height: 75px;
+      line-height: 75px;
+      width: 75px;
+      margin-right: 20px;
+      text-align: center;
+    }
+    .add-icon img {
+      width: 100%;
+    }
+    .address-box .add-icon img {
+      max-width: 75px;
+      max-height: 75px;
+    }
+    .add-content {
+      padding-left: 70px;
+    }
+    .add-content h5 {
+      font-size: 17px;
+      color: #ffffff;
+      padding: 0;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .add-content p {
+      font-size: 13px;
+      color: #999999;
+      font-weight: 300;
+    }
+    .add-content p a {
+      font-size: 14px;
+      color: #999999;
+      font-weight: 300;
+      word-wrap: break-word;
+    }
+    .add-content p a:hover {
+      color: #ffb32d;
+    }
+  </style>
+  <body>
+    <!--  Navigation Bar  -->
+    <div class="main-nav">
+      <span class="logo"><h4>Wedding Cinema's</h4></span>
+      <div class="topnav" id="myTopnav">
+        <a href="#contact" class="active">Contact</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Serives
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Pre-Wedding</a>
+            <a href="#">Wedding</a>
+            <a href="#">Cinematic video</a>
+            <a href="#">Product</a>
+          </div>
+        </div>
+        <a href="#home">Home</a>
+        <a
+          href="javascript:void(0);"
+          style="font-size: 15px"
+          class="icon"
+          onclick="myFunction()"
+          >&#9776;</a
+        >
+      </div>
+    </div>
+    <div>
+      <img src="card/wedding.jpg" class="wedimg" alt="" />
+      <h1 class="bg-text">Wedding photography In Thane</h1>
+      <br />
+    </div>
+    <div class="text">
+      <p>
+        Are you getting married? Well Just Remember…. The cake gets eaten, the
+        flowers will die, but the wedding photos will last forever……Our team of
+        professional wedding photographers in Mumbai has been capturing wedding
+        moments through creative ideas for more than 10 years. We are a group of
+        passionate photographers that specialize in Wedding Photography, Candid
+        Photography, Pre-Wedding Photography, Engagement shoots, and Destination
+        Weddings. So if you are looking for a wedding photographer in Mumbai or
+        Nearby you that captures the cherished moments of your wedding ceremony,
+        do not hesitate to contact Ollar studios. Be it a Christian, Marathi or
+        Gujarati style of wedding, irrespective of the style, we ought to take
+        care of all your photography needs and strive to deliver the best. A
+        Wedding is the most special and unforgettable experience for every
+        couple and on this big day you deserve to have the best. Let’s live this
+        moment forever with our professional photography team. Be it a small
+        budget wedding, a big fat wedding or a destination wedding, we at Ollar
+        Studios make sure to capture remarkable and beautiful images, as well as
+        unforgettable stories of the wedding day for you, your loved ones, and
+        the future generations.
+      </p>
+    </div>
+    <br /><br />
+    <div>
+      <h2 class="h2-a">Our Wedding Photography Serives In Thane</h2>
+      <h6 class="h6-b">Our packages includes the following services.</h6>
+    </div>
+    <div class="section">
+      <div class="text3">
+        <h1>Destination Wedding</h1>
+        <br /><br />
+        <p>
+          Have you planned for a Destination Wedding? Our team has immense
+          experience in Destination wedding photography and we ensure to fulfill
+          your needs and expectations to capture the tiniest of details and
+          preserve it all in great photographs. Just choose your destination and
+          our experts’ team will be more than willing to accommodate your
+          destination wedding needs wherever it may take us.
+        </p>
+      </div>
+      <img src="card/team1.jpeg" alt="" />
+    </div>
+
+    <div class="section1">
+      <div class="text4">
+        <h1>Traditional Wedding</h1>
+        <br /><br />
+        <p>
+          Traditional Wedding Photography involves capturing simple images of
+          the couple and participants of wedding events by focusing on natural
+          expressions. This particular style of photography focuses on covering
+          all the ceremony and rituals of an event and photos of the people who
+          attended it.
+        </p>
+      </div>
+      <img src="card/team2.jpeg" alt="" class="kk" />
+    </div>
+    <br />
+    <div class="section2">
+      <div class="text5">
+        <h1>Wedding Candid Photography</h1>
+        <br /><br />
+        <p>
+          Candid Photography is a new and modern take on wedding photography. In
+          the busy schedule of a wedding, it can become hard to take a pause and
+          look at small perfections. We believe ‘Photos act as a ticket to a
+          moment otherwise gone’ and candid photography can be a blessing in
+          disguise that will capture the best candid moments and emotions into a
+          photograph so that years from now you have an emotional illustration
+          of your wedding day.
+        </p>
+      </div>
+      <img src="card/team3.jpeg" alt="" />
+    </div>
+    <br />
+    <div>
+      <h2 class="h2-g">Our Recent Work</h2>
+      <br /><br />
+      <p class="g2">
+        We offer a high-quality wedding photography service and an unhurried
+        experience that will capture the full experience of your day. We strive
+        to provide quality service, customer comfort, and Competitive pricing.
+        Here are some glimpses of our recent work listed below.
+      </p>
+    </div>
+    <div class="container2">
+      <div class="gallery2">
+        <img src="gallary/g1.jpeg" alt="" />
+        <img src="gallary/g2.jpeg" alt="" />
+        <img src="gallary/g3.jpeg" alt="" />
+        <img src="gallary/g4.jpeg" alt="" />
+        <img src="gallary/g5.jpeg" alt="" />
+        <img src="gallary/g6.jpeg" alt="" />
+        <img src="gallary/g7.jpeg" alt="" />
+        <img src="gallary/g8.jpg" alt="" />
+        <img src="gallary/g9.jpg" alt="" />
+        <img src="gallary/g10.jpg" alt="" />
+        <img src="gallary/g11.jpg" alt="" />
+        <img src="gallary/g12.jpg" alt="" />
+      </div>
+      <div class="popup">
+        <span>&times; </span>
+      </div>
+    </div>
+    <script src="home.js"></script>
+    <footer class="footer-main bg-dark fixed-bottom">
+      <div class="container3">
+        <div class="row address-main">
+          <div class="col-lg-4 col-sm-12 col-xs-12">
+            <div class="address-box clearfix">
+              <div class="add-icon">
+                <img src="images/location1.png" alt="" />
+              </div>
+              <div class="add-content">
+                <h5>Address</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut veniam
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 col-xs-12">
+            <div class="address-box clearfix">
+              <div class="add-icon">
+                <img src="images/phone1.png" alt="" />
+              </div>
+              <div class="add-content">
+                <h5>Phone</h5>
+                <p>
+                  +(91) 000000000 <br />
+                  +(91) 000000000
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 col-xs-12">
+            <div class="address-box clearfix">
+              <div class="add-icon">
+                <img src="images/gmail.png" alt="" />
+              </div>
+              <div class="add-content">
+                <h5>Email</h5>
+                <p>
+                  <a href="mailto:" style="text-decoration: none"
+                    >weddingcinema's@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Footer -->
+      <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+            >
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fa fa-twitter"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fa fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-outline-light btn-floating m-1"
+              href="#!"
+              role="button"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          ©Copyright 2022 All Rights Reserved.
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </footer>
+  </body>
+</html>
